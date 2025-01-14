@@ -1,59 +1,36 @@
 {
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "qwerty-learner",
+  "version": "0.1.0",
+  "identifier": "cool.kaiyi.qwerty",
   "build": {
+    "frontendDist": "../build",
+    "devUrl": "http://localhost:3000",
     "beforeBuildCommand": "yarn build",
-    "beforeDevCommand": "yarn run dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../build"
+    "beforeDevCommand": "yarn run dev"
   },
-  "package": {
-    "productName": "qwerty-learner",
-    "version": "0.1.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "all": false
-    },
-    "bundle": {
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
-      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
-      "identifier": "com.litongjava.qwerty.learner",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "security": {
-      "csp": null
-    },
-    "updater": {
-      "active": false
-    },
+  "app": {
     "windows": [
       {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
         "title": "qwerty-learner",
-        "width": 800
+        "width": 1280,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
       }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "../public/favicon-32x32.png",
+      "../public/android-chrome-192x192.png",
+      "../public/android-chrome-512x512.png",
+      "../public/favicon.ico"
     ]
   }
 }
